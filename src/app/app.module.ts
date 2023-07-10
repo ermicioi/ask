@@ -9,18 +9,21 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MainViewComponent } from './views/main-view/main-view.component';
 import { MenuComponent, MenuItemMarker } from './components/core/menu/menu.component';
-import { ViewBaseComponent } from './components/shared/view-base/view-base.component';
 import { InfoPanelViewComponent } from './views/info-panel-view/info-panel-view.component';
 import { InfoPanelModule } from './components/shared/info-panel/info-panel.module';
+import { ViewBaseModule } from './components/shared/view-base/view-base.module';
+
+const views = [
+  MainViewComponent,
+  InfoPanelViewComponent
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainViewComponent,
     MenuComponent,
     MenuItemMarker,
-    ViewBaseComponent,
-    InfoPanelViewComponent,
+    ...views
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { InfoPanelModule } from './components/shared/info-panel/info-panel.modul
       { path: '', component: MainViewComponent },
       { path: 'components/info-panel', component: InfoPanelViewComponent   }
     ]),
+    ViewBaseModule,
     InfoPanelModule
   ],
   providers: [],
