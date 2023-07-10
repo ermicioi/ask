@@ -10,3 +10,7 @@ body {
 
   font-family: 'Roboto', 'Helvetica Neue Light', 'Helvetica';
 }
+
+.xg-pad-bottom {
+  padding-bottom: 25px;
+}
