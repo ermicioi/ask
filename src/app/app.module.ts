@@ -11,8 +11,7 @@ import { MainViewComponent } from './views/main-view/main-view.component';
 import { MenuComponent, MenuItemMarker } from './components/core/menu/menu.component';
 import { ViewBaseComponent } from './components/shared/view-base/view-base.component';
 import { InfoPanelViewComponent } from './views/info-panel-view/info-panel-view.component';
-import { InfoPanelComponent } from './components/shared/info-panel/info-panel.component';
-import { InfoPanelHeaderComponent } from './components/shared/info-panel/info-panel-header.component';
+import { InfoPanelModule } from './components/shared/info-panel/info-panel.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,6 @@ import { InfoPanelHeaderComponent } from './components/shared/info-panel/info-pa
     MenuItemMarker,
     ViewBaseComponent,
     InfoPanelViewComponent,
-    InfoPanelComponent,
-    InfoPanelHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +31,8 @@ import { InfoPanelHeaderComponent } from './components/shared/info-panel/info-pa
     RouterModule.forRoot([
       { path: '', component: MainViewComponent },
       { path: 'components/info-panel', component: InfoPanelViewComponent   }
-    ])
+    ]),
+    InfoPanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
