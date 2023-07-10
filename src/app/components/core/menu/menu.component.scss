@@ -1,0 +1,18 @@
+:host {
+  ul {
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+
+    li {
+      padding-bottom: 5px;
+
+      ::ng-deep {
+        .mdc-button {
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
