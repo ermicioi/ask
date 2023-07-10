@@ -1,0 +1,35 @@
+:host {
+
+  .c-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px 0;
+  }
+
+  ::ng-deep {
+
+    .xc-group {
+      .xc-header {
+        display: block;
+        padding-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        li {
+          a {
+            width: 100%;
+            justify-content: flex-start;
+          }
+
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+}

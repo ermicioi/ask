@@ -1,0 +1,13 @@
+:host {
+  .c-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0 50px;
+  }
+
+  .c-right {
+    min-width: 250px;
+  }
+}
