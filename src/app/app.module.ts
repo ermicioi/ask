@@ -9,13 +9,15 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { MainViewComponent } from './views/main-view/main-view.component';
 import { MenuComponent, MenuItemMarker } from './components/core/menu/menu.component';
+import { ViewBaseComponent } from './components/shared/view-base/view-base.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainViewComponent,
     MenuComponent,
-    MenuItemMarker
+    MenuItemMarker,
+    ViewBaseComponent
   ],
   imports: [
     BrowserModule,
