@@ -35,7 +35,7 @@
         p {
           font-size: 14px;
           margin: 0;
-          color: rgba(0, 0, 0, 0.8);
+          color: rgba(0, 0, 0, 0.6);
         }
       }
 
@@ -45,6 +45,8 @@
           width: $size;
           height: $size;
           font-size: $size;
+
+          margin-top:3px;
         }
       }
     }
