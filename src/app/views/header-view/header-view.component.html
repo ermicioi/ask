@@ -1,0 +1,14 @@
+<app-view-base>
+  <ng-container header-title>Header</ng-container>
+  <ng-container header-subtitle>Apploication header component</ng-container>
+  <mat-icon header-icon>home</mat-icon>
+
+  <ng-container *ngFor="let i of [1,2,3,4,5,6]">
+    <app-header level="{{i}}">
+      <mat-icon header-icon>home</mat-icon>
+      <span headerTitle>App header H{{i}}</span>
+      <span headerSubTitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+    </app-header>
+    <br />
+  </ng-container>
+</app-view-base>
