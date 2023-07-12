@@ -11,10 +11,10 @@ import { AppComponent } from './app.component';
 import { MainViewComponent } from './views/main-view/main-view.component';
 import { MenuComponent, MenuItemMarker } from './components/core/menu/menu.component';
 import { InfoPanelViewComponent } from './views/info-panel-view/info-panel-view.component';
-import { InfoPanelModule } from './components/shared/info-panel/info-panel.module';
 import { HeaderViewComponent } from './views/header-view/header-view.component';
 import { AskViewModule } from './components/shared/ask-view/ask-view.module';
 import { AskHeaderModule } from './components/shared/ask-header/ask-header.module';
+import { AskInfoPanelModule } from './components/shared/ask-info-panel/ask-info-panel.module';
 
 const views = [
   MainViewComponent,
@@ -42,7 +42,7 @@ const views = [
       { path: 'components/info-panel', component: InfoPanelViewComponent }
     ]),
     AskViewModule,
-    InfoPanelModule,
+    AskInfoPanelModule,
     AskHeaderModule
   ],
   providers: [],
