@@ -1,19 +1,19 @@
 import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
-import { ViewBaseComponent } from './components/view-base/view-base.component';
+import { AskViewComponent } from './components/ask-view/ask-view.component';
 import { HeaderModule } from '../header/header.module';
 @NgModule({
   declarations: [
-    ViewBaseComponent
+    AskViewComponent
   ],
   exports: [
-    ViewBaseComponent,
+    AskViewComponent,
   ],
   imports: [
     HeaderModule,
     MatIconModule
   ]
 })
-export class ViewBaseModule {
+export class AskViewModule {
 
 }
