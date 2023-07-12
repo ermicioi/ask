@@ -7,6 +7,12 @@
     gap: 0 50px;
   }
 
+  .c-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+  }
+
   .c-right {
     min-width: 250px;
   }

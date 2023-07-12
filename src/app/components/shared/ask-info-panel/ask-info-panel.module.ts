@@ -3,16 +3,19 @@ import { AskInfoPanelComponent } from './components/ask-info-panel/ask-info-pane
 import { AskInfoPanelPropertiesComponent } from './components/ask-info-panel-properties/ask-info-panel-properties.component';
 import { AskInfoPanelMenuComponent } from './components/ask-info-panel-menu/ask-info-panel-menu.component';
 import { AskHeaderModule } from '../ask-header/ask-header.module';
+import { AskInfoPanelSectionComponent } from './components/ask-info-panel-section/ask-info-panel-section.component';
 @NgModule({
   declarations: [
     AskInfoPanelComponent,
     AskInfoPanelPropertiesComponent,
-    AskInfoPanelMenuComponent
+    AskInfoPanelMenuComponent,
+    AskInfoPanelSectionComponent
   ],
   exports: [
     AskInfoPanelComponent,
     AskInfoPanelPropertiesComponent,
-    AskInfoPanelMenuComponent
+    AskInfoPanelMenuComponent,
+    AskInfoPanelSectionComponent
   ],
   imports: [
     AskHeaderModule
