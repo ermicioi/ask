@@ -1,13 +1,13 @@
 <div class="c-header">
   <div class="c-left-panel">
-    <ng-content select="mat-icon[header-icon]"></ng-content>
-    <div class="c-header-title">
-      <h1><ng-content select="[header-title]"></ng-content></h1>
-      <p><ng-content select="[header-subtitle]"></ng-content></p>
-    </div>
+    <app-header level="1">
+      <ng-container headerTitle><ng-content select="> [viewHeaderTitle]"></ng-content></ng-container>
+      <ng-container headerSubTitle><ng-content select="> [viewHeaderSubtitle]"></ng-content></ng-container>
+      <ng-container headerIcon><ng-content select="> [viewHeaderIcon]"></ng-content></ng-container>
+    </app-header>
   </div>
   <div class="c-right-panel">
-    <ng-content select="[header-toolbar]"></ng-content>
+    <ng-content select="> [viewHeaderToolbar]"></ng-content>
   </div>
 </div>
 <ng-content></ng-content>

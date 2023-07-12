@@ -15,10 +15,12 @@ import { InfoPanelModule } from './components/shared/info-panel/info-panel.modul
 import { ViewBaseModule } from './components/shared/view-base/view-base.module';
 import { HeaderComponent } from './components/shared/header/components/header/header.component';
 import { HeaderViewComponent } from './views/header-view/header-view.component';
+import { HeaderModule } from './components/shared/header/header.module';
 
 const views = [
   MainViewComponent,
-  InfoPanelViewComponent
+  InfoPanelViewComponent,
+  HeaderViewComponent
 ];
 
 @NgModule({
@@ -26,9 +28,7 @@ const views = [
     AppComponent,
     MenuComponent,
     MenuItemMarker,
-    ...views,
-    HeaderComponent,
-    HeaderViewComponent
+    ...views
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,8 @@ const views = [
       { path: 'components/info-panel', component: InfoPanelViewComponent }
     ]),
     ViewBaseModule,
-    InfoPanelModule
+    InfoPanelModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

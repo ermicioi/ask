@@ -1,7 +1,7 @@
 <app-view-base>
-  <ng-container header-title>Header</ng-container>
-  <ng-container header-subtitle>Apploication header component</ng-container>
-  <mat-icon header-icon>home</mat-icon>
+  <mat-icon viewHeaderIcon>home</mat-icon>
+  <span viewHeaderTitle>Header Component</span>
+  <span viewHeaderSubtitle>Application header component</span>
 
   <mat-card>
     <mat-card-header>
@@ -43,7 +43,7 @@
     <mat-card-content>
       <ng-container *ngFor="let i of [1,2,3,4,5,6]">
         <app-header level="{{i}}">
-          <mat-icon header-icon>home</mat-icon>
+          <span headerIcon><mat-icon header-icon>home</mat-icon></span>
           <span headerTitle>App header H{{i}}</span>
         </app-header>
         <br />
@@ -60,7 +60,7 @@
     <mat-card-content>
       <ng-container *ngFor="let i of [1,2,3,4,5,6]">
         <app-header level="{{i}}">
-          <mat-icon header-icon>home</mat-icon>
+          <span headerIcon><mat-icon header-icon>home</mat-icon></span>
           <span headerTitle>App header H{{i}}</span>
           <span headerSubTitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
         </app-header>
