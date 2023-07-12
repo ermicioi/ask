@@ -13,8 +13,8 @@ import { MenuComponent, MenuItemMarker } from './components/core/menu/menu.compo
 import { InfoPanelViewComponent } from './views/info-panel-view/info-panel-view.component';
 import { InfoPanelModule } from './components/shared/info-panel/info-panel.module';
 import { HeaderViewComponent } from './views/header-view/header-view.component';
-import { HeaderModule } from './components/shared/header/header.module';
 import { AskViewModule } from './components/shared/ask-view/ask-view.module';
+import { AskHeaderModule } from './components/shared/ask-header/ask-header.module';
 
 const views = [
   MainViewComponent,
@@ -43,7 +43,7 @@ const views = [
     ]),
     AskViewModule,
     InfoPanelModule,
-    HeaderModule
+    AskHeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

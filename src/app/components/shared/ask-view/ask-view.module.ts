@@ -1,7 +1,7 @@
 import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { AskViewComponent } from './components/ask-view/ask-view.component';
-import { HeaderModule } from '../header/header.module';
+import { AskHeaderModule } from '../ask-header/ask-header.module';
 @NgModule({
   declarations: [
     AskViewComponent
@@ -10,7 +10,7 @@ import { HeaderModule } from '../header/header.module';
     AskViewComponent,
   ],
   imports: [
-    HeaderModule,
+    AskHeaderModule,
     MatIconModule
   ]
 })

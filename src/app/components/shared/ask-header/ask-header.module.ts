@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HeaderComponent } from './components/header/header.component';
+import { AskHeaderComponent } from './components/header/ask-header.component';
 @NgModule({
   declarations: [
-    HeaderComponent
+    AskHeaderComponent
   ],
   exports: [
-    HeaderComponent
+    AskHeaderComponent
   ],
   imports: [
     BrowserModule
   ]
 })
-export class HeaderModule {
+export class AskHeaderModule {
 
 }
