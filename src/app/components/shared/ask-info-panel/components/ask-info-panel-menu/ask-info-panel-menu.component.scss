@@ -9,8 +9,10 @@
 
   ::ng-deep {
 
-    .xc-group {
-      .xc-header {
+    [menuSection] {
+      padding: 10px;
+
+      [menuHeader] {
         display: block;
         padding-bottom: 10px;
         font-size: 1.1em;
@@ -30,6 +32,12 @@
           padding-bottom: 2px;
         }
       }
+    }
+
+    [bordered] {
+      border: 1px solid rgba($color: #000000, $alpha: 0.2);
+      border-radius: 4px;
+      padding: 9px;
     }
   }
 }
