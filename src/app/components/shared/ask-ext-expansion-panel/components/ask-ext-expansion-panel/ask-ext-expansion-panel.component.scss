@@ -1,0 +1,17 @@
+:host {
+  ::ng-deep {
+    mat-expansion-panel-header {
+      height: auto;
+      min-height: 48px;
+
+      &.mat-expanded {
+        height: auto;
+        min-height: 64px;
+      }
+
+      mat-panel-description {
+        padding: 15px 0;
+      }
+    }
+  }
+}

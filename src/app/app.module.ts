@@ -15,11 +15,15 @@ import { HeaderViewComponent } from './views/header-view/header-view.component';
 import { AskViewModule } from './components/shared/ask-view/ask-view.module';
 import { AskHeaderModule } from './components/shared/ask-header/ask-header.module';
 import { AskInfoPanelModule } from './components/shared/ask-info-panel/ask-info-panel.module';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { ExtExpansionPanelViewComponent } from './views/ext-expansion-panel-view/ext-expansion-panel-view.component';
+import { AskExtExpansionPanelModule } from './components/shared/ask-ext-expansion-panel/ask-ext-expansion-panel.module';
 
 const views = [
   MainViewComponent,
   InfoPanelViewComponent,
-  HeaderViewComponent
+  HeaderViewComponent,
+  ExtExpansionPanelViewComponent
 ];
 
 @NgModule({
@@ -36,14 +40,17 @@ const views = [
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    MatExpansionModule,
     RouterModule.forRoot([
       { path: '', component: MainViewComponent },
       { path: 'components/header', component: HeaderViewComponent },
-      { path: 'components/info-panel', component: InfoPanelViewComponent }
+      { path: 'components/info-panel', component: InfoPanelViewComponent },
+      { path: 'components/ext/expansion-panel', component: ExtExpansionPanelViewComponent }
     ]),
     AskViewModule,
     AskInfoPanelModule,
-    AskHeaderModule
+    AskHeaderModule,
+    AskExtExpansionPanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
