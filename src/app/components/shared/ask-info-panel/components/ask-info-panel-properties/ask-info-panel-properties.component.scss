@@ -18,8 +18,14 @@
           display: inline-block;
         }
       }
+    }
+  }
+}
 
-      &.xc-large {
+:host([large]) {
+  ::ng-deep {
+    ul {
+      li {
         strong {
           min-width: 250px;
         }
