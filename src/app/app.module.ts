@@ -18,6 +18,8 @@ import { AskInfoPanelModule } from './components/shared/ask-info-panel/ask-info-
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ExtExpansionPanelViewComponent } from './views/ext-expansion-panel-view/ext-expansion-panel-view.component';
 import { AskExtExpansionPanelModule } from './components/shared/ask-ext-expansion-panel/ask-ext-expansion-panel.module';
+import { AskCardViewComponent } from './views/ask-card-view/ask-card-view.component';
+import { AskCardModule } from './components/shared/ask-card/ask-card.module';
 
 const views = [
   MainViewComponent,
@@ -31,7 +33,8 @@ const views = [
     AppComponent,
     MenuComponent,
     MenuItemMarker,
-    ...views
+    ...views,
+    AskCardViewComponent
   ],
   imports: [
     BrowserModule,
@@ -45,12 +48,14 @@ const views = [
       { path: '', component: MainViewComponent },
       { path: 'components/header', component: HeaderViewComponent },
       { path: 'components/info-panel', component: InfoPanelViewComponent },
+      { path: 'components/card', component: AskCardViewComponent },
       { path: 'components/ext/expansion-panel', component: ExtExpansionPanelViewComponent }
     ]),
     AskViewModule,
     AskInfoPanelModule,
     AskHeaderModule,
-    AskExtExpansionPanelModule
+    AskExtExpansionPanelModule,
+    AskCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
