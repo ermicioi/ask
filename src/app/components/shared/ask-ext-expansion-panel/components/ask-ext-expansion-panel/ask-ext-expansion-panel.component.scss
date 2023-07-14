@@ -7,6 +7,13 @@
       &.mat-expanded {
         height: auto;
         min-height: 64px;
+
+        // The toolbar when expanded, icons should be visible
+        mat-panel-description[withToolbar] {
+          > button {
+            display: inherit;
+          }
+        }
       }
 
       mat-panel-title[withSubtitle] {
@@ -21,6 +28,16 @@
 
       mat-panel-description[withHugeDescription] {
         padding: 15px 0;
+      }
+
+      mat-panel-description[withToolbar] {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        > button {
+          display: none;
+        }
       }
     }
   }
