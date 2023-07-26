@@ -8,65 +8,136 @@
       <mat-card-title>Headers</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ng-container *ngFor="let i of [1,2,3,4,5,6]">
-        <app-ask-header level="{{i}}">
-          <span headerTitle>App header H{{i}}</span>
-        </app-ask-header>
-        <br />
-      </ng-container>
+      <app-ask-header>
+        <h1>Header H1</h1>
+      </app-ask-header>
+      <app-ask-header>
+        <h2>Header H2</h2>
+      </app-ask-header>
+      <app-ask-header>
+        <h6>Header H6</h6>
+      </app-ask-header>
     </mat-card-content>
   </mat-card>
-
-  <br />
 
   <mat-card>
     <mat-card-header>
       <mat-card-title>Headers with subtitle</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ng-container *ngFor="let i of [1,2,3,4,5,6]">
-        <app-ask-header level="{{i}}">
-          <span headerTitle>App header H{{i}}</span>
-          <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-        </app-ask-header>
-        <br />
-      </ng-container>
+      <app-ask-header>
+        <h1>
+          <span headerText>Header H1
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h1>
+      </app-ask-header>
+      <app-ask-header>
+        <h2>
+          <span headerText>Header H2
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h2>
+      </app-ask-header>
+      <app-ask-header>
+        <h6>
+          <span headerText>Header H6
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h6>
+      </app-ask-header>
     </mat-card-content>
   </mat-card>
-
-  <br />
 
   <mat-card>
     <mat-card-header>
       <mat-card-title>Headers with icon</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ng-container *ngFor="let i of [1,2,3,4,5,6]">
-        <app-ask-header level="{{i}}">
-          <span headerIcon><mat-icon header-icon>home</mat-icon></span>
-          <span headerTitle>App header H{{i}}</span>
-        </app-ask-header>
-        <br />
-      </ng-container>
+      <app-ask-header>
+        <h1><span headerIcon><mat-icon header-icon>home</mat-icon></span>Header H1</h1>
+      </app-ask-header>
+      <app-ask-header>
+        <h2><span headerIcon><mat-icon header-icon>home</mat-icon></span>Header H2</h2>
+      </app-ask-header>
+      <app-ask-header>
+        <h6><span headerIcon><mat-icon header-icon>home</mat-icon></span>Header H6</h6>
+      </app-ask-header>
     </mat-card-content>
   </mat-card>
-
-  <br />
 
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Headers with icon and subtitle</mat-card-title>
+      <mat-card-title>Headers with icon &amp; subtitle</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <ng-container *ngFor="let i of [1,2,3,4,5,6]">
-        <app-ask-header level="{{i}}">
+      <app-ask-header>
+        <h1>
           <span headerIcon><mat-icon header-icon>home</mat-icon></span>
-          <span headerTitle>App header H{{i}}</span>
-          <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
-        </app-ask-header>
-        <br />
-      </ng-container>
+          <span headerText>Header H1
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h1>
+      </app-ask-header>
+      <app-ask-header>
+        <h2>
+          <span headerIcon><mat-icon header-icon>home</mat-icon></span>
+          <span headerText>Header H2
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h2>
+      </app-ask-header>
+      <app-ask-header>
+        <h6>
+          <span headerIcon><mat-icon header-icon>home</mat-icon></span>
+          <span headerText>Header H6
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h6>
+      </app-ask-header>
     </mat-card-content>
   </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Headers with multiple icons &amp; subtitle</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-ask-header>
+        <h1>
+          <span headerIcon>
+            <mat-icon header-icon>home</mat-icon>
+            <mat-icon header-icon>dns</mat-icon>
+          </span>
+          <span headerText>Header H1
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h1>
+      </app-ask-header>
+      <app-ask-header>
+        <h2>
+          <span headerIcon>
+            <mat-icon header-icon>home</mat-icon>
+            <mat-icon header-icon>dns</mat-icon>
+          </span>
+          <span headerText>Header H2
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h2>
+      </app-ask-header>
+      <app-ask-header>
+        <h6>
+          <span headerIcon>
+            <mat-icon header-icon>home</mat-icon>
+            <mat-icon header-icon>dns</mat-icon>
+          </span>
+          <span headerText>Header H6
+            <span headerSubtitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+          </span>
+        </h6>
+      </app-ask-header>
+    </mat-card-content>
+  </mat-card>
+
 
 </app-ask-view>
