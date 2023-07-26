@@ -1,9 +1,12 @@
 <div class="c-header">
   <div class="c-left-panel">
-    <app-ask-header level="1">
-      <ng-container headerTitle><ng-content select="> [viewHeaderTitle]"></ng-content></ng-container>
-      <ng-container headerSubtitle><ng-content select="> [viewHeaderSubtitle]"></ng-content></ng-container>
-      <ng-container headerIcon><ng-content select="> [viewHeaderIcon]"></ng-content></ng-container>
+    <app-ask-header>
+      <h1>
+        <span headerIcon><ng-content select="> [viewHeaderIcon]"></ng-content></span>
+        <span headerText><ng-content select="> [viewHeaderTitle]"></ng-content>
+          <span headerSubtitle><ng-content select="> [viewHeaderSubtitle]"></ng-content></span>
+        </span>
+      </h1>
     </app-ask-header>
   </div>
   <div class="c-right-panel">
