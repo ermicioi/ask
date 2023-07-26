@@ -7,6 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class AskHeaderComponent {
 
-  @Input() level: string | null = null;
-
 }

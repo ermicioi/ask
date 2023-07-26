@@ -6,19 +6,20 @@
     border: #{$borderSize}px solid rgba($color: $bgColor, $alpha: 0.2);
     background-color: rgba($color: $bgColor, $alpha: 0.1);
     padding: #{10 - $borderSize + 1}px;
+    margin-bottom: 20px;
   }
 }
 
 :host {
-  @include _styled(#000, 1);
+  @include _styled(#000, 0);
   .c-root {
     border-radius: 4px;
     background-color: inherit;
   }
 }
 
-:host([borderLess]) {
-  @include _styled(#000, 0);
+:host([bordered]) {
+  @include _styled(#000, 1);
   .c-root {
     background-color: inherit;
   }

@@ -7,7 +7,7 @@
 
   ::ng-deep {
     @for $i from 0 through 6 {
-      $_size: #{$baseFontSize - $i * 2}px;
+      $_size: #{$baseFontSize - $i * 3}px;
 
       h#{$i} {
         display: flex;
