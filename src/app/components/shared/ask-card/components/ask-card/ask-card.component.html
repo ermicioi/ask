@@ -4,6 +4,9 @@
     <mat-card-subtitle><ng-content select="> [cardSubtitle]"></ng-content></mat-card-subtitle>
     <div toolbar>
       <ng-content select="> [cardToolbar]"></ng-content>
+      <button *ngIf="loadable" mat-icon-button (click)="onCardLoadAction()">
+        <mat-icon>refresh</mat-icon>
+      </button>
     </div>
   </mat-card-header>
   <mat-card-content>

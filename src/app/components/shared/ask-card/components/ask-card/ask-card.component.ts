@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ask-card',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AskCardComponent {
 
+  @Input() loadable: boolean = false;
+
+  @Output() load = new EventEmitter<void>();
+
+  onCardLoadAction() {
+    if (this.loadable) {
+      this.load.emit();
+    }
+  }
 }

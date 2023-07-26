@@ -12,13 +12,9 @@ export class MenuItemMarker {
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements AfterViewInit {
+export class MenuComponent {
 
   @ContentChildren (MenuItemMarker) elements: QueryList<any> | null = null;
-
-  ngAfterViewInit() {
-    this.elements?.forEach(div => console.log(div));
-  }
 
 }
 

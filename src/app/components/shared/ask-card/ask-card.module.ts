@@ -13,6 +13,7 @@ import { MatButtonModule } from "@angular/material/button";
     AskCardComponent
   ],
   imports: [
+    BrowserModule,
     MatButtonModule,
     MatCardModule,
     MatIconModule

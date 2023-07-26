@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AskCardViewComponent {
 
+  onCardLoad(): void {
+    console.log('Load event fired by card')
+  }
+
 }
