@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AskCardModel, AskCardState } from 'src/app/components/shared/ask-card/components/ask-card/ask-card.component';
 
 @Component({
   selector: 'app-ask-card-view',
@@ -7,8 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AskCardViewComponent {
 
+  loadableCardModel: AskCardModel = new AskCardModel(true, AskCardState.NONE);
+
   onCardLoad(): void {
-    console.log('Load event fired by card')
+    this.loadableCardModel.state = AskCardState.LOADING;
+
+    setTimeout(() => this.loadableCardModel.state = AskCardState.NONE, 3000);
   }
 
 }

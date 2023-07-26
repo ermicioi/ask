@@ -8,12 +8,26 @@ import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/co
 export class AskCardComponent {
 
   @Input() loadable: boolean = false;
+  @Input() state: AskCardState = AskCardState.NONE;
 
   @Output() load = new EventEmitter<void>();
+
+  AskCardState = AskCardState;
 
   onCardLoadAction() {
     if (this.loadable) {
       this.load.emit();
     }
   }
+}
+
+export enum AskCardState {
+  NONE = 'none',
+  LOADING = 'loading'
+}
+
+export class AskCardModel {
+  constructor(
+    readonly loadable: boolean,
+    public state: AskCardState) {}
 }

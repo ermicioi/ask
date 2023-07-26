@@ -23,7 +23,7 @@
       of Lorem Ipsum.</p>
   </app-ask-card>
 
-  <app-ask-card [loadable]="true" (load)="onCardLoad()">
+  <app-ask-card [loadable]="loadableCardModel.loadable" [state]="loadableCardModel.state" (load)="onCardLoad()">
     <span cardTitle>The loadable card</span>
     <span cardSubtitle>The card subtitle</span>
     <span cardToolbar>
