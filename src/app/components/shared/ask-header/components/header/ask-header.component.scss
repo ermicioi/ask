@@ -29,6 +29,8 @@
 
         [headerIcon] {
           padding-right: 5px;
+          display: flex;
+          flex-direction: row;
         }
 
         [headerText] {
@@ -43,5 +45,11 @@
       }
     }
 
+  }
+}
+
+:host([slim]) {
+  .c-root {
+    padding: 0 0 10px 0;
   }
 }
