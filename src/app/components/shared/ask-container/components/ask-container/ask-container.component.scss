@@ -1,0 +1,33 @@
+@mixin _styled($bgColor, $borderSize) {
+  border: #{$borderSize}px solid rgba($color: $bgColor, $alpha: 0.2);
+  background-color: rgba($color: $bgColor, $alpha: 0.1);
+  padding: #{10 - $borderSize}px;
+}
+
+:host {
+  display: inline-block;
+  @include _styled(#000, 0);
+  background-color: inherit;
+}
+
+:host([bordered]) {
+  @include _styled(#000, 1);
+  background-color: inherit;
+}
+
+:host([accented]) {
+  @include _styled(#000, 2);
+  background-color: inherit;
+}
+
+:host([informative]) {
+  @include _styled(#3f51b5, 1);
+}
+
+:host([dangerous]) {
+  @include _styled(#f44336, 1);
+}
+
+:host([disabled]) {
+  @include _styled(#6b6b6b, 1);
+}

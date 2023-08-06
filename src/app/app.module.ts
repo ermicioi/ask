@@ -23,6 +23,9 @@ import { AskCardModule } from './components/shared/ask-card/ask-card.module';
 import { AskPropertyListViewComponent } from './views/ask-property-list-view/ask-property-list-view.component';
 import { AskPropertyListComponent } from './components/shared/ask-property-list/components/ask-property-list/ask-property-list.component';
 import { AskPropertyListModule } from './components/shared/ask-property-list/ask-property-list.module';
+import { AskContainerComponent } from './components/shared/ask-container/components/ask-container/ask-container.component';
+import { AskContainerViewComponent } from './views/ask-container-view/ask-container-view.component';
+import { AskContainerModule } from './components/shared/ask-container/ask-container.module';
 
 const views = [
   MainViewComponent,
@@ -30,7 +33,8 @@ const views = [
   HeaderViewComponent,
   AskCardViewComponent,
   MatExpansionPanelViewComponent,
-  AskPropertyListViewComponent
+  AskPropertyListViewComponent,
+  AskContainerViewComponent
 ];
 
 @NgModule({
@@ -53,6 +57,7 @@ const views = [
       { path: 'components/header', component: HeaderViewComponent },
       { path: 'components/info-panel', component: InfoPanelViewComponent },
       { path: 'components/card', component: AskCardViewComponent },
+      { path: 'components/ask-container', component: AskContainerViewComponent },
       { path: 'components/ask-property-list', component: AskPropertyListViewComponent },
       { path: 'components/mat-expansion-panel', component: MatExpansionPanelViewComponent }
     ]),
@@ -61,7 +66,8 @@ const views = [
     AskHeaderModule,
     AskMatExpansionPanelModule,
     AskCardModule,
-    AskPropertyListModule
+    AskPropertyListModule,
+    AskContainerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
