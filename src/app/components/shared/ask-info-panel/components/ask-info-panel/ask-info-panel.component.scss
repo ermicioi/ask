@@ -1,16 +1,14 @@
 :host {
-  .c-root {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0 50px;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0 50px;
 
   .c-left {
     display: flex;
     flex-direction: column;
-    gap: 10px 0;
+    gap: 25px 0;
   }
 
   .c-right {
