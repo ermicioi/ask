@@ -8,7 +8,7 @@ import { AskCardModel, AskCardState } from 'src/app/components/shared/ask-card/c
 })
 export class AskCardViewComponent {
 
-  loadableCardModel: AskCardModel = new AskCardModel(true, AskCardState.NONE);
+  loadableCardModel: AskCardModel = new AskCardModel(true, AskCardState.INITIAL);
 
   onCardLoad(): void {
     this.loadableCardModel.state = AskCardState.LOADING;

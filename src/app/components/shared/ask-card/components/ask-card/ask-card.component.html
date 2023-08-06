@@ -10,7 +10,10 @@
     </div>
   </mat-card-header>
   <mat-card-content>
-    <ng-content></ng-content>
+    <ng-container *ngIf="lazyLoad && state === AskCardState.INITIAL">
+      Lazy Load
+    </ng-container>
+    <ng-container *ngIf="!lazyLoad || state !== AskCardState.INITIAL"><ng-content></ng-content></ng-container>
   </mat-card-content>
   <mat-card-footer>
     <ng-container *ngIf="loadable">

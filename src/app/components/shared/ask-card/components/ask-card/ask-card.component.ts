@@ -8,6 +8,7 @@ import { Component, EventEmitter, HostBinding, Input, Output } from '@angular/co
 export class AskCardComponent {
 
   @Input() loadable: boolean = false;
+  @Input() lazyLoad: boolean = false;
   @Input() state: AskCardState = AskCardState.NONE;
 
   @Output() load = new EventEmitter<void>();
@@ -23,6 +24,7 @@ export class AskCardComponent {
 
 export enum AskCardState {
   NONE = 'none',
+  INITIAL = 'initial',
   LOADING = 'loading'
 }
 

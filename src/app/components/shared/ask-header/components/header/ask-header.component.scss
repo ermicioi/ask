@@ -1,55 +1,72 @@
 :host {
-  $baseFontSize: 28;
+  $baseFontSize: 26;
 
-  .c-root {
-    padding: 0 0 20px 0;
+  ._header-base {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+
+    margin-bottom: 15px;
+
+    mat-icon {
+      display: inline-block;
+      width: #{$baseFontSize}px;
+      text-align: center;
+      margin-right: 2px;
+    }
+
+    [headerText] {
+      display: inline-block;
+    }
+
+    [headerSubtitle] {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+    }
   }
 
   ::ng-deep {
-    @for $i from 0 through 6 {
-      $_size: #{$baseFontSize - $i * 3}px;
 
-      h#{$i} {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
+    // Header h1 - h3
+    @for $i from 0 to 3 {
+      $_fontsize: #{$baseFontSize - $i * 3}px;
 
-        margin: 0;
-        padding: 0;
-
-        font-size: $_size;
-        font-weight: normal;
+      h#{$i + 1} {
+        @extend ._header-base;
+        font-size: $_fontsize;
 
         mat-icon {
-          font-size: $_size;
-          width: #{$baseFontSize}px;
-          height: $_size;
-          text-align: center;
-        }
-
-        [headerIcon] {
-          padding-right: 5px;
-          display: flex;
-          flex-direction: row;
-        }
-
-        [headerText] {
-          display: flex;
-          flex-direction: column;
-        }
-
-        [headerSubtitle] {
-          font-size: 14px;
-          color: rgba(0, 0, 0, 0.6);
+          font-size: $_fontsize;
         }
       }
     }
 
+    // Header h4 - h6
+    @for $i from 0 to 3 {
+      $_fontsize: #{$baseFontSize - 6 - $i * 2}px;
+
+      h#{$i + 4} {
+        @extend ._header-base;
+        font-size: $_fontsize;
+
+        mat-icon {
+          font-size: $_fontsize;
+        }
+      }
+    }
   }
 }
 
-:host([slim]) {
-  .c-root {
-    padding: 0 0 10px 0;
+:host([no-margin]) {
+  ::ng-deep {
+    @for $i from 1 to 7 {
+      h#{$i} {
+        margin: 0;
+      }
+    }
   }
 }
