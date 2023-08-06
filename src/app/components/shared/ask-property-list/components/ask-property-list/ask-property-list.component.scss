@@ -1,0 +1,87 @@
+:host {
+  display: block;
+
+  ::ng-deep {
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        letter-spacing: 0.1em;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+
+        &>strong {
+          display: inline-block;
+          width: 150px;
+          word-wrap: break-word;
+          font-weight: normal;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+:host([xSmall]) {
+  ::ng-deep {
+
+    ul,
+    ol {
+      li>strong {
+        width: 50px;
+      }
+    }
+  }
+}
+
+:host([small]) {
+  ::ng-deep {
+
+    ul,
+    ol {
+      li>strong {
+        width: 100px;
+      }
+    }
+  }
+}
+
+:host([large]) {
+  ::ng-deep {
+
+    ul,
+    ol {
+      li>strong {
+        width: 250px;
+      }
+    }
+  }
+}
+
+:host([xLarge]) {
+  ::ng-deep {
+
+    ul,
+    ol {
+      li>strong {
+        width: 400px;
+      }
+    }
+  }
+}
+
+:host([noColoring]) {
+  ::ng-deep {
+
+    ul,
+    ol {
+      li {
+        color: inherit;
+      }
+    }
+  }
+}

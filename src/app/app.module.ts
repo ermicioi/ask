@@ -20,13 +20,17 @@ import { MatExpansionPanelViewComponent } from './views/mat-expansion-panel-view
 import { AskMatExpansionPanelModule } from './components/shared/ask-mat-expansion-panel/ask-mat-expansion-panel.module';
 import { AskCardViewComponent } from './views/ask-card-view/ask-card-view.component';
 import { AskCardModule } from './components/shared/ask-card/ask-card.module';
+import { AskPropertyListViewComponent } from './views/ask-property-list-view/ask-property-list-view.component';
+import { AskPropertyListComponent } from './components/shared/ask-property-list/components/ask-property-list/ask-property-list.component';
+import { AskPropertyListModule } from './components/shared/ask-property-list/ask-property-list.module';
 
 const views = [
   MainViewComponent,
   InfoPanelViewComponent,
   HeaderViewComponent,
   AskCardViewComponent,
-  MatExpansionPanelViewComponent
+  MatExpansionPanelViewComponent,
+  AskPropertyListViewComponent
 ];
 
 @NgModule({
@@ -49,13 +53,15 @@ const views = [
       { path: 'components/header', component: HeaderViewComponent },
       { path: 'components/info-panel', component: InfoPanelViewComponent },
       { path: 'components/card', component: AskCardViewComponent },
+      { path: 'components/ask-property-list', component: AskPropertyListViewComponent },
       { path: 'components/mat-expansion-panel', component: MatExpansionPanelViewComponent }
     ]),
     AskViewModule,
     AskInfoPanelModule,
     AskHeaderModule,
     AskMatExpansionPanelModule,
-    AskCardModule
+    AskCardModule,
+    AskPropertyListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
